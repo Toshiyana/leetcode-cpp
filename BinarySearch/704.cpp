@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
-// #include <iostream>
 
 using namespace std;
+
+// Simple binary search
 
 class Solution
 {
