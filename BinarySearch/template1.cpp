@@ -12,6 +12,7 @@ public:
         int mid, left = 0, right = nums.size() - 1;
         while (left <= right)
         {
+            //  wiser to do mid = l + (r - l)/2 instead of mid = (l+r)/2 to avoid overflow
             mid = left + (right - left) / 2;
             if (target == nums[mid])
                 return mid;
