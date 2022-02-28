@@ -1,0 +1,8 @@
+Description
+practice class in cpp.
+use noramal variable, not pointer variable in class.
+
+Component
+* Television.h: header file. write definition of classes.
+* Television.cpp: write the contents of classes.
+* main.cpp: include main function. call Television class.
