@@ -1,0 +1,2 @@
+* stack: LIFO (Last In First Out)
+* queue: FIFO (First In First Out)

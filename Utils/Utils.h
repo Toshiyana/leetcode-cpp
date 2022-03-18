@@ -33,10 +33,10 @@ template <typename T>
 void print2dVector(vector<vector<T>> vec)
 {
     int height = vec.size();
-    int width = vec[0].size();
+    // int width = vec[0].size(); // 全ての行で, 列数が同じ場合
 
-    cout << "Height: " << height << endl;
-    cout << "Width: " << width << endl;
+    // cout << "Height: " << height << endl;
+    // cout << "Width: " << width << endl;
 
     cout << endl;
 
@@ -44,6 +44,7 @@ void print2dVector(vector<vector<T>> vec)
 
     for (int y = 0; y < height; y++)
     {
+        int width = vec[y].size(); // 行ごとに、列数が異なる場合
         cout << "   { ";
         for (int x = 0; x < width; x++)
         {
