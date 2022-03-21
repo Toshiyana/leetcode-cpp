@@ -2,9 +2,7 @@
 
 using namespace std;
 
-/ https : // leetcode.com/problems/max-area-of-island/discuss/108533/JavaC%2B%2B-Straightforward-dfs-solution
-
-          class Solution
+class Solution
 {
 public:
     int maxAreaOfIsland(vector<vector<int>> &grid)
