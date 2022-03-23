@@ -14,8 +14,8 @@ template <typename T>
 void print1dVector(vector<T> vec)
 {
     int length = vec.size();
-    cout << "Length: " << length << endl;
-    cout << endl;
+    // cout << "Length: " << length << endl;
+    // cout << endl;
 
     cout << "{ ";
     for (int i = 0; i < length; i++)
