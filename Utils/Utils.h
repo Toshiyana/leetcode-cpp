@@ -4,11 +4,16 @@
 
 using namespace std;
 
+// Vector
 template <typename T>
 void print1dVector(vector<T> vec);
 
 template <typename T>
 void print2dVector(vector<vector<T>> vec);
+
+// Set
+template <typename T>
+void printUnorderedSet(unordered_set<T> set);
 
 template <typename T>
 void print1dVector(vector<T> vec)
@@ -57,5 +62,16 @@ void print2dVector(vector<vector<T>> vec)
         cout << "}," << endl;
     }
 
+    cout << "}" << endl;
+}
+
+template <typename T>
+void printUnorderedSet(unordered_set<T> set)
+{
+    cout << "{ ";
+    for (auto x : set)
+    {
+        cout << x << ", ";
+    }
     cout << "}" << endl;
 }
