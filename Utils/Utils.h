@@ -15,6 +15,19 @@ void print2dVector(vector<vector<T>> vec);
 template <typename T>
 void printUnorderedSet(unordered_set<T> set);
 
+// ListNode
+// Definition for singly-linked list.
+// struct ListNode
+// {
+//     int val;
+//     ListNode *next;
+//     ListNode() : val(0), next(nullptr) {}
+//     ListNode(int x) : val(x), next(nullptr) {}
+//     ListNode(int x, ListNode *next) : val(x), next(next) {}
+// };
+template <typename T>
+void printListNode(T *head);
+
 template <typename T>
 void print1dVector(vector<T> vec)
 {
@@ -74,4 +87,16 @@ void printUnorderedSet(unordered_set<T> set)
         cout << x << ", ";
     }
     cout << "}" << endl;
+}
+
+// ListNode
+template <typename T>
+void printListNode(T *head)
+{
+    cout << head->val << endl;
+    while (head->next)
+    {
+        head = head->next;
+        cout << head->val << endl;
+    }
 }
