@@ -1,0 +1,5 @@
+* stack: LIFO (Last In First Out)
+* queue: FIFO (First In First Out)
+    * priority_queue: 優先順位が高いもの（最大値）から取り出される。
+        * pq.top(): 値の取得
+        * pq.pop(): 値の除去

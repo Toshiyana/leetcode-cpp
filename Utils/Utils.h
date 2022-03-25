@@ -4,6 +4,9 @@
 
 using namespace std;
 
+//----------------------------------------------------------------------------
+// Definition
+//----------------------------------------------------------------------------
 // Vector
 template <typename T>
 void print1dVector(vector<T> vec);
@@ -14,6 +17,10 @@ void print2dVector(vector<vector<T>> vec);
 // Set
 template <typename T>
 void printUnorderedSet(unordered_set<T> set);
+
+// Map
+template <typename T>
+void printUnorderedMap(unordered_map<T, T> mp);
 
 // ListNode
 // Definition for singly-linked list.
@@ -27,6 +34,8 @@ void printUnorderedSet(unordered_set<T> set);
 // };
 template <typename T>
 void printListNode(T *head);
+
+//----------------------------------------------------------------------------
 
 template <typename T>
 void print1dVector(vector<T> vec)
@@ -87,6 +96,15 @@ void printUnorderedSet(unordered_set<T> set)
         cout << x << ", ";
     }
     cout << "}" << endl;
+}
+
+template <typename T>
+void printUnorderedMap(unordered_map<T, T> mp)
+{
+    for (auto it = mp.begin(); it != mp.end(); ++it)
+    {
+        cout << "key = " << it->first << ", val = " << it->second << endl;
+    }
 }
 
 // ListNode
