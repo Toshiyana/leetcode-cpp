@@ -8,6 +8,8 @@ class Solution
 public:
     vector<vector<int>> subsets(vector<int> &nums)
     {
+        sort(nums.begin(), nums.end());
+
         vector<vector<int>> subs;
         vector<int> sub;
 
@@ -17,14 +19,14 @@ public:
     }
 
 private:
-    void subsets(vector<int> &nums, int i, vector<vector<int>> &subs, vector<int> &sub)
+    void subsets(vector<int> &nums, int begin, vector<vector<int>> &subs, vector<int> &sub)
     {
         subs.push_back(sub);
 
-        for (int j = i; j < nums.size(); j++)
+        for (int i = begin; i < nums.size(); i++)
         {
-            sub.push_back(nums[j]);
-            subsets(nums, j + 1, subs, sub);
+            sub.push_back(nums[i]);
+            subsets(nums, i + 1, subs, sub);
             sub.pop_back(); // 末尾要素の削除（backtrack）
         }
     }
