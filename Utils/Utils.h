@@ -19,8 +19,8 @@ template <typename T>
 void printUnorderedSet(unordered_set<T> set);
 
 // Map
-template <typename T>
-void printUnorderedMap(unordered_map<T, T> mp);
+template <typename T, typename U>
+void printUnorderedMap(unordered_map<T, U> mp);
 
 // ListNode
 // Definition for singly-linked list.
@@ -98,8 +98,8 @@ void printUnorderedSet(unordered_set<T> set)
     cout << "}" << endl;
 }
 
-template <typename T>
-void printUnorderedMap(unordered_map<T, T> mp)
+template <typename T, typename U>
+void printUnorderedMap(unordered_map<T, U> mp)
 {
     for (auto it = mp.begin(); it != mp.end(); ++it)
     {
