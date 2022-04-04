@@ -35,6 +35,17 @@ void printUnorderedMap(unordered_map<T, U> mp);
 template <typename T>
 void printListNode(T *head);
 
+// Queue
+template <typename T>
+void printPriorityQueue(priority_queue<T> pq)
+{
+    while (!pq.empty())
+    {
+        cout << pq.top() << endl;
+        pq.pop();
+    }
+}
+
 //----------------------------------------------------------------------------
 
 template <typename T>

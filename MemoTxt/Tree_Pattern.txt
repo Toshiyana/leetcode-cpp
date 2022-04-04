@@ -1,0 +1,30 @@
+# DFS
+* Preorder (行きがけ順)
+    * use recursion
+* Inorder (通りがけ順)
+    * approach1: use stack
+    * approach2: use recursion
+    * approach3: use Morris traversal (https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/)
+* Postorder (帰りがけ順)
+
+# BFS
+    * use queue
+
+# Practice
+## DFS
+* Preorder (行きがけ順)
+    * https://leetcode.com/problems/n-ary-tree-preorder-traversal/
+    * https://leetcode.com/problems/binary-tree-preorder-traversal/
+* Inorder (通りがけ順)
+    * https://leetcode.com/problems/binary-tree-inorder-traversal/
+    * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+* Postorder (帰りがけ順)
+    * https://leetcode.com/problems/n-ary-tree-postorder-traversal/
+    * https://leetcode.com/problems/binary-tree-postorder-traversal/
+## BFS
+    * https://leetcode.com/problems/symmetric-tree/
+    * https://leetcode.com/problems/binary-tree-level-order-traversal/
+    * https://leetcode.com/problems/word-ladder/
+
+
+Ref: https://zenn.dev/kueharx/articles/6e0362c9c28a65

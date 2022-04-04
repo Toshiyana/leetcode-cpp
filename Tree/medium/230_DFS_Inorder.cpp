@@ -18,20 +18,12 @@ struct TreeNode
 
 // https://leetcode.com/problems/validate-binary-search-tree/discuss/32112/Learn-one-iterative-inorder-traversal-apply-it-to-multiple-tree-questions-(Java-Solution)
 
-// Use inorder traversal
-
 class Solution
 {
 public:
-    bool isValidBST(TreeNode *root)
+    int kthSmallest(TreeNode *root, int k)
     {
-        if (!root)
-            return true;
-
         stack<TreeNode *> st;
-
-        TreeNode *pre = NULL;
-
         while (root || !st.empty())
         {
             while (root)
@@ -41,35 +33,22 @@ public:
             }
             root = st.top();
             st.pop();
-
-            if (pre && root->val <= pre->val)
-                return false;
-
-            pre = root;
+            if (--k == 0)
+                break;
             root = root->right;
         }
-        return true;
+        return root->val;
     }
 };
 
 int main()
 {
     Solution sol;
-    // root = [2, 1, 3]
-    TreeNode *root = new TreeNode(2);
+    // root = [3,1,4,null,2], k = 1
+    TreeNode *root = new TreeNode(3);
     root->left = new TreeNode(1);
-    root->right = new TreeNode(3);
+    root->right = new TreeNode(4);
+    root->left->right = new TreeNode(2);
 
-    // root = [5,4,6,null,null,3,7]
-    // [5,4,6,null,null,3,7] not a validate binary tree
-    // https://leetcode.com/problems/validate-binary-search-tree/discuss/1388739/why-is-546nullnull37-not-a-validate-binary-tree
-
-    // TreeNode *root = new TreeNode(5);
-    // root->left = new TreeNode(4);
-    // root->right = new TreeNode(6);
-
-    // root->right->left = new TreeNode(3);
-    // root->right->right = new TreeNode(7);
-
-    cout << sol.isValidBST(root) << endl;
+    cout << sol.kthSmallest(root, 2) << endl;
 }
