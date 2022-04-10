@@ -15,9 +15,10 @@ public:
         return result;
     }
 
+private:
     void permuteRecursive(vector<int> &num, int begin, vector<vector<int>> &result)
     {
-        if (begin == num.size())
+        if (begin == num.size() - 1)
         {
             result.push_back(num);
             return;

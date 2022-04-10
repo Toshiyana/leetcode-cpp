@@ -10,7 +10,7 @@ class Solution
 public:
     vector<vector<int>> permuteUnique(vector<int> &nums)
     {
-        sort(nums.begin(), nums.end());
+        sort(nums.begin(), nums.end()); // don't forget
         vector<vector<int>> res;
         permuteRecursive(nums, 0, res);
 
@@ -22,7 +22,7 @@ private:
     {
         int n = nums.size();
 
-        if (begin == n)
+        if (begin == n - 1)
             res.push_back(nums);
         else
         {
@@ -36,7 +36,10 @@ private:
 
             // Restore nums
             for (int i = n - 1; i > begin; --i)
-                swap(nums[begin], nums[i]);
+            {
+                if (nums[begin] != nums[i])
+                    swap(nums[begin], nums[i]);
+            }
         }
     }
 };
