@@ -2,6 +2,11 @@
 
 using namespace std;
 
+// https://leetcode.com/problems/sqrtx/discuss/553452/C%2B%2B-Binary-Search-Approach-Runtime%3A-0ms-Faster-than-100
+
+// Time Complexity: O(logn) | due to binary search using while loop.
+// Space Complexity: O(1) | as only 4 variables are initialized at the beginning. Which is constant irrespective of given input.
+
 class Solution
 {
 public:

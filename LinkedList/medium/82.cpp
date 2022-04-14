@@ -54,10 +54,12 @@ int main()
     // input: 1,2,3,3,4,4,5
     // output: 1,2,5
     ListNode *root = new ListNode(1);
-    root->next = new ListNode(1);
-    root->next->next = new ListNode(2);
+    root->next = new ListNode(2);
+    root->next->next = new ListNode(3);
     root->next->next->next = new ListNode(3);
-    root->next->next->next->next = new ListNode(3);
+    root->next->next->next->next = new ListNode(4);
+    root->next->next->next->next->next = new ListNode(4);
+    root->next->next->next->next->next->next = new ListNode(5);
 
     sol.deleteDuplicates(root);
     // printListNode(root);
