@@ -34,7 +34,7 @@ public:
     int lengthOfLIS(vector<int> &nums)
     {
         int n = nums.size();
-        vector<int> dp(n, 1);
+        vector<int> dp(n, 1); // dp[i]: 要素iまでにおける部分配列の長さの最大値
 
         for (int i = 0; i < n; i++)
         {

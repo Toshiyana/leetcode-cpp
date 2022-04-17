@@ -24,7 +24,7 @@ public:
             i++;
         }
 
-        // newIterval part (with or without merge)
+        // newInterval part (with or without merge)
         while (i < intervals.size() && intervals[i][0] <= newInterval[1])
         {
             newInterval[0] = min(newInterval[0], intervals[i][0]);

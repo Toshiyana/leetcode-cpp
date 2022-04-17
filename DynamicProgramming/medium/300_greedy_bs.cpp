@@ -57,12 +57,17 @@ public:
         for (int x : nums)
         {
             // sub[sub.size() - 1]: value of the last index
-            if (sub.empty() || sub[sub.size() - 1] < x)
+            if (sub.empty() || sub[sub.size() - 1] < x) // subが空 or subの最後の要素がx未満
+            {
                 sub.push_back(x);
+                // print1dVector(sub);
+            }
             else
             {
-                auto it = lower_bound(sub.begin(), sub.end(), x); // Find the index of the smallest number >= x
-                *it = x;                                          // Replace that number with x
+                // subの中で、x以上の最小の要素をxと入れ替える
+                auto it = lower_bound(sub.begin(), sub.end(), x); // Find the index of "the smallest number >= x"
+                *it = x;                                          // イテレータitの指す先に値xを代入(Replace that number with x in sub)
+                // print1dVector(sub);
             }
         }
         return sub.size();

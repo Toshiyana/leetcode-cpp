@@ -28,7 +28,7 @@ public:
             // cout << "fast: " << fast->val << endl;
             // cout << endl;
 
-            if (slow == fast)
+            if (slow == fast) // valでなく、nodeのアドレスが同じか判断
                 return true;
         }
         return false;
